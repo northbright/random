@@ -23,7 +23,7 @@ func RandTime(minTime, maxTime time.Time, pad time.Duration) (time.Time, error) 
 
 	nMillisecond := int64(d / time.Millisecond)
 	if nMillisecond <= 0 {
-		return time.Now(), nil
+		return min, nil
 	}
 
 	rand.Seed(time.Now().UnixNano())
